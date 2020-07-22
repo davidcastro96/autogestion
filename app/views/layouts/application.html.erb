@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Autogestion</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="nav justify-content-end">
+      <%- if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to 'Salir de la sesión', destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </li>
+      <% else user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to 'Iniciar sesión', new_user_session_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Registrarme', new_user_registration_path, class: "nav-link" %>
+      </li>
+      <% end %>
+    </ul>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </div>
+</body>
+</html>

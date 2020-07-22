@@ -1,0 +1,8 @@
+<div class="col-4">
+	<figure class="figure">
+		<%= image_tag image.picture.medium.url, class:'igure-img img-fluid rounded' %>
+		<figcaption class="figure-caption"><%= image.description %> - <%= image.name %><br>
+			<%= link_to 'Editar', edit_image_path(image)%>
+			<%= link_to 'Eliminar', image, method: :delete, data: {confirm: 'Está seguro de eliminar?'} %></figcaption>
+		</figure>
+	</div>

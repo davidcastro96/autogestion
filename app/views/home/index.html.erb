@@ -1,0 +1,32 @@
+<%-# esta es una validación para saber si el usuario esta iniciado -%>
+<% if user_signed_in?%>
+<h6><%= current_user.name %>, Bienvenido al módulo de autogestión</h6>
+<div class="row">
+	<div class="col-4">
+		<div>
+			<ul class="nav">
+				<li>
+					<p>Documentos pendientes</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-8">
+		<div>
+			<ul class="nav">
+				<li>
+					<p><strong><%= @images.count %></strong> Publicaciones</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<%-# esta es una validación si no esta iniciado el usuario -%>
+<div class="row">
+	<%= render @images %>
+</div>
+<%= will_paginate @images %>
+<%-# si no esta logueado ningun usuario mostrar el siguiente contenido-%>
+<% else %>
+<h6>Módulo de autogestión de Importadora Cali</h6>
+<% end %>
