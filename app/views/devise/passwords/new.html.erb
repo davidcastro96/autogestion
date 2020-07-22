@@ -1,4 +1,4 @@
-<h2>Forgot your password?</h2>
+<h2>Olvidaste tu contraseña</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -7,10 +7,13 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
+&nbsp
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Enviarme instrucciones de restablecer contraseña" %>
   </div>
 <% end %>
+&nbsp
+<div>
+	<%= render "devise/shared/links" %>
+</div>
 
-<%= render "devise/shared/links" %>
