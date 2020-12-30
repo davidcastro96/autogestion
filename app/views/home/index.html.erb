@@ -1,6 +1,7 @@
 <%-# esta es una validación para saber si el usuario esta iniciado -%>
 <% if user_signed_in?%>
 <h6><%= current_user.name %>, Bienvenido al módulo de autogestión</h6>
+<%= link_to 'Subir otro documento', "images/new"%>
 <div class="row">
 	<div class="col-4">
 		<div>
