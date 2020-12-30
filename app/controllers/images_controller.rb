@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
 		@image = current_user.images.new image_params
 
 		if @image.save
-			return redirect_to images_path
+			return redirect_to "/"
 		end
 		render :new
 	end
@@ -36,7 +36,7 @@ class ImagesController < ApplicationController
 	def destroy
 	#before_action :set_image, only:[:show, :edit, :update, :destroy]
 	@image.destroy
-	redirect_to images_path
+	redirect_to "/"
 	end
 
 	private
