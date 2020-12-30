@@ -224,7 +224,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara (~> 2.13)
-  carrierwave
+  carrierwave (~> 2.0)
   coffee-rails (~> 4.2)
   devise
   jbuilder (~> 2.5)
