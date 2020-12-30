@@ -1,8 +1,3 @@
-<%- if @image.errors.any? %>
-<div class="alert alert-danger" role="alert">
-	Ha ocurrido un error, parece que algunos de los campos están vacíos
-</div>
-<% end %>
 <div class="form-group">
 	<%= form_for @image do |f| %>
 	<div>
@@ -31,3 +26,8 @@
 	<%= f.submit 'Enviar', :class => 'btn btn-primary'%>
 	<% end %>
 </div>
+<%- if @image.errors.any? %>
+<div class="alert alert-danger" role="alert">
+	Ha ocurrido un error, parece que algunos de los campos están vacíos
+</div>
+<% end %>
