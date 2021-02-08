@@ -20,7 +20,7 @@ gem 'devise'
 # Paginacion 
 gem 'will_paginate', '~> 3.1.0'
 # Cargar imagenes
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'mini_magick'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
