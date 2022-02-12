@@ -98,6 +98,7 @@ GEM
       warden (~> 1.2.3)
     erubi (1.10.0)
     execjs (2.7.0)
+    ffi (1.14.2)
     ffi (1.14.2-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -126,11 +127,14 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.2)
     nio4r (2.5.4)
+    nokogiri (1.10.10)
+      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.10-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     public_suffix (4.0.6)
-    puma (3.12.6)
+    puma (4.3.11)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -220,6 +224,7 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   byebug
@@ -230,7 +235,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   mini_magick
-  puma (~> 3.7)
+  puma (~> 4.3)
   rails (~> 6.1.0)
   sass-rails (~> 5.0)
   selenium-webdriver
